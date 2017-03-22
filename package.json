@@ -1,0 +1,14 @@
+{
+  "name": "AARP-Skills-Decoder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Lawrence Norton <lawrence@lawrencenorton.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
