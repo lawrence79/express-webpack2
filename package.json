@@ -5,7 +5,7 @@
   "author": "Lawrence Norton <lawrence@lawrencenorton.com>",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha -w"
   },
   "devDependencies": {
     "chai": "^3.5.0",
