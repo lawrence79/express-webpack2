@@ -2,36 +2,21 @@
 
 import textract from 'textract'
 import nlp from 'compromise'
+import config from '../config'
+import express from 'express'
+import chalk from 'chalk'
 
-const indeedApi = require('indeed-jobs-api').getInstance('4047192740211228')
+var Linkedin = require('node-linkedin')(config.clientId, config.clientSecret, config.callback);
 
-indeedApi.JobSearch()
-  .Radius(20)
-  .WhereLocation({
-    city : "Stevens Point",
-    state : "WI"
-  })
-  .Limit(2)
-  .WhereKeywords(["Information Technology"])
-  .SortBy("date")
-  .UserIP("1.2.3.4")
-  .UserAgent("Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36")
-  .Search(
-    function (results) {
+let app = express();
 
-  },
-    function (error) {
-    // do something with the error results
-    console.log(error);
+app.set('port', (process.env.PORT || 8080))
+
+app.get('/', function(req, res) {
+
 })
 
-indeedApi.GetJob().WhereJobKeys(['ac25da5dda053f73']).Retrieve(
-  function (results) {
-    // do something with the success results
-    console.log(results);
-  },
-  function (error) {
-    // do something with the error results
-    console.log(error);
-  })
-
+app.listen(app.get('port'), () => {
+  console.log(chalk.cyan('Server Started ' + new Date()));
+  console.log(chalk.yellow(`http://localhost:${app.get('port')}`));
+})

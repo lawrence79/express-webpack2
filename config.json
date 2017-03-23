@@ -1,0 +1,5 @@
+{
+  "clientId": "77p918rx7pjsu2",
+  "clientSecret": "ABlAwffbF36y2DAO",
+  "callback": "http://localhost:8080/auth/linkedin/callback"
+}
