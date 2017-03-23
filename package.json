@@ -1,17 +1,27 @@
 {
   "name": "AARP-Skills-Decoder",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./resumse-parser/index.js",
   "author": "Lawrence Norton <lawrence@lawrencenorton.com>",
   "license": "MIT",
   "scripts": {
-    "test": "./node_modules/.bin/mocha -w"
+    "dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-2\"",
+    "build": "babel src -s -D -d dist --presets es2015,stage-2",
+    "start": "node dist",
+    "prestart": "npm run -s build",
+    "test": "node_modules/.bin/mocha"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-2": "^6.22.0",
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "compromise": "^8.1.0",
+    "indeed-jobs-api": "^0.1.1",
     "textract": "^2.1.1"
   }
 }
