@@ -1,5 +1,5 @@
 {
-  "name": "AARP-Skills-Decoder",
+  "name": "webpack2-express",
   "version": "1.0.0",
   "main": "./src/index.js",
   "author": "Lawrence Norton <lawrence@lawrencenorton.com>",
