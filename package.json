@@ -6,11 +6,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.24.0",
-    "babel-preset-latest": "^6.24.0",
-    "eslint": "^3.18.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0"
+    "babel-preset-latest": "^6.24.0"
   },
   "dependencies": {
     "express": "^4.15.2",
@@ -23,7 +19,6 @@
   "scripts": {
     "build:dev": "webpack --config ./config/webpack.config.js --env=dev --progress --profile --colors",
     "build:prod": "webpack --config ./config/webpack.config.js --env=prod --progress --profile --colors",
-    "lint": "eslint .",
     "postinstall": "npm run build:prod",
     "start": "node server"
   }
